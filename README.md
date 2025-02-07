@@ -11,7 +11,7 @@ mysql --version
 sudo mysql -u root < filename.sql
 ```
 
-## 📁 Database Management
+## Database Management
 
 - **Show all databases**
   ```sql
@@ -33,7 +33,7 @@ sudo mysql -u root < filename.sql
   DROP DATABASE database_name;
   ```
 
-## 📋 Table Management
+## Table Management
 
 - **Show all tables**
   ```sql
@@ -80,7 +80,7 @@ sudo mysql -u root < filename.sql
   DROP TABLE table_name;
   ```
 
-## 📥 Data Manipulation (CRUD)
+## Data Manipulation (CRUD)
 
 - **Insert data into a table**
   ```sql
@@ -124,11 +124,16 @@ sudo mysql -u root < filename.sql
   TRUNCATE TABLE table_name;
   ```
 
-## 🔍 Advanced Queries
+## Advanced Queries
 
 - **Sorting results**
   ```sql
   SELECT * FROM table_name ORDER BY age DESC;
+  ```
+
+- **Group By**
+  ```sql
+  SELECT column_name, COUNT(*) FROM table_name GROUP BY column_name;
   ```
 
 - **Limit results**
@@ -151,7 +156,7 @@ sudo mysql -u root < filename.sql
   SELECT AVG(age) AS average_age, SUM(age) AS total_age FROM table_name;
   ```
 
-## 🔗 Joins
+## Joins
 
 - **Inner Join**
   ```sql
@@ -185,39 +190,7 @@ sudo mysql -u root < filename.sql
   RIGHT JOIN orders ON users.id = orders.user_id;
   ```
 
-## 🔒 User Management
-
-- **Show all users**
-  ```sql
-  SELECT user, host FROM mysql.user;
-  ```
-
-- **Create a new user**
-  ```sql
-  CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-  ```
-
-- **Grant privileges**
-  ```sql
-  GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost';
-  ```
-
-- **Flush privileges (apply changes)**
-  ```sql
-  FLUSH PRIVILEGES;
-  ```
-
-- **Revoke privileges**
-  ```sql
-  REVOKE ALL PRIVILEGES ON database_name.* FROM 'username'@'localhost';
-  ```
-
-- **Drop (delete) a user**
-  ```sql
-  DROP USER 'username'@'localhost';
-  ```
-
-## 📌 Transactions
+## Transactions
 
 - **Start a transaction**
   ```sql
@@ -234,7 +207,7 @@ sudo mysql -u root < filename.sql
   COMMIT;
   ```
 
-## 📌 Indexing
+## Indexing
 
 - **Create an index**
   ```sql
@@ -251,7 +224,7 @@ sudo mysql -u root < filename.sql
   DROP INDEX idx_name ON table_name;
   ```
 
-## 🚀 Backup & Restore
+## Backup & Restore
 
 - **Backup a database**
   ```sh
