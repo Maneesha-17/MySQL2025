@@ -1,0 +1,8 @@
+ How TRUNCATE Works:
+ 
+    Deletes all records from the table (like DELETE but faster).
+    Resets auto-increment values (if the table has an AUTO_INCREMENT column).
+    Cannot be rolled back (unlike DELETE).
+    More efficient than DELETE (faster and uses less transaction log).
+
+TRUNCATE TABLE table_name;
