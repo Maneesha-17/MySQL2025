@@ -1,0 +1,11 @@
+ How AUTO_INCREMENT Works:
+    Automatically increases by 1 for each new row
+    Ensures unique values without manually inserting them
+    Works only on INT or BIGINT data types
+    Must be used on a PRIMARY KEY or UNIQUE column
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50)
+);
